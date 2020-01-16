@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { ContainerStyled, ListaFilmesStyled, ListaFilmes } from '../../styles';
 
 class Home extends Component {
 
@@ -31,21 +32,21 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="lista-filmes">
+      <ContainerStyled largura={900}>
+        <ListaFilmesStyled>
           {
             this.state.filmes.map((item) => {
               return (
-                <article className="filme" key={item.id}>
+                <ListaFilmes key={item.id}>
                   <strong>{item.nome}</strong>
                   <img src={item.foto} alt="Capa" />
                   <Link to={`filme/${item.id}`}>Acessar</Link>
-                </article>
+                </ListaFilmes>
               )
             })
           }
-        </div>
-      </div>
+        </ListaFilmesStyled>
+      </ContainerStyled>
     )
   }
 }

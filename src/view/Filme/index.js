@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import './Filme.css'
+import React, { Component } from 'react';
+import { FilmeStyled } from '../../styles';
 
 class Filme extends Component {
 
@@ -24,15 +24,15 @@ class Filme extends Component {
 
   render() {
     return (
-      <div className="filme-info">
+      <FilmeStyled>
         <h1> Titulo: {this.state.filme.nome} </h1>
-        <img src={this.state.filme.foto} alt='Foto' />
+        <img style={{ borderRadius: '50px' }} src={this.state.filme.foto} alt='Foto' />
         {
           this.state.filme.length !== 0 &&
           <h3>Sinopse</h3>
         }
         {this.state.filme.sinopse}
-      </div>
+      </FilmeStyled>
     )
   }
 }

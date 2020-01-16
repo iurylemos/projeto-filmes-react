@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
 import Routes from './routes';
+import { AppStyled } from './styles';
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
+      <AppStyled>
         <Routes />
-      </div>
+      </AppStyled>
     )
   }
 }
