@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './Header.css';
 import { HeaderStyled } from '../../styles'
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 class Header extends Component {
   render() {
     return (
       <HeaderStyled>
-        <Link to="/">Home</Link>
+        <div id="home">
+          <nav>
+            <ul>
+              <li><Link smooth to="#home">Home</Link></li>
+              <li><Link smooth to="#sobre">Sobre</Link></li>
+              <li><Link smooth to="#700">Filme</Link></li>
+            </ul>
+          </nav>
+        </div>
       </HeaderStyled>
     )
   }

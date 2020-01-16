@@ -13,3 +13,26 @@ a{
   color: #fff;
   cursor: pointer;
 }
+
+.menu {
+  display: flex;
+}
+
+ul {
+  display: flex;
+}
+
+nav ul, nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 15px;
+  color: #fff;
+  font-weight: bold;
+}

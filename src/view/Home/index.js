@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import { ContainerStyled, ListaFilmesStyled, ListaFilmes } from '../../styles';
+import { HashLink } from 'react-router-hash-link';
+import Inicio from '../Inicio';
+import Sobre from '../Sobre';
 
 class Home extends Component {
 
@@ -33,11 +36,13 @@ class Home extends Component {
   render() {
     return (
       <ContainerStyled largura={900}>
+        <Inicio />
+        <Sobre />
         <ListaFilmesStyled>
           {
             this.state.filmes.map((item) => {
               return (
-                <ListaFilmes key={item.id}>
+                <ListaFilmes id={item.id} key={item.id}>
                   <strong>{item.nome}</strong>
                   <img src={item.foto} alt="Capa" />
                   <Link to={`filme/${item.id}`}>Acessar</Link>
@@ -46,6 +51,7 @@ class Home extends Component {
             })
           }
         </ListaFilmesStyled>
+        <HashLink smooth to='#inicio'> Inicio </HashLink>
       </ContainerStyled>
     )
   }

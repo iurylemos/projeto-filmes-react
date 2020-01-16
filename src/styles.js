@@ -8,12 +8,13 @@ export const AppStyled = styled.div`
   flex-direction: column;
 `;
 
-export const HeaderStyled = styled.div`
+export const HeaderStyled = styled.header`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  height: 90px;
   width: 100%;
-  height: 60px;
+  justify-content: center;
+  align-items: center;
   background-color: blueviolet;
 `;
 
